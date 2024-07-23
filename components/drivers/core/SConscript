@@ -1,0 +1,17 @@
+from building import *
+
+cwd = GetCurrentDir()
+src = ['device.c', 'driver.c']
+CPPPATH = [cwd + '/../include']
+group = []
+
+if GetDepend(['RT_USING_DM']):
+    src += ['dm.c', 'bus.c', 'numa.c', 'platform.c', 'power.c', 'power_domain.c']
+
+if GetDepend(['RT_USING_OFW']):
+    src += ['platform_ofw.c']
+
+group = DefineGroup('DeviceDrivers', src, depend = [''], CPPPATH = CPPPATH)
+
+Return('group')
+

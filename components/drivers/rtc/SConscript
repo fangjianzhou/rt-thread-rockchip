@@ -1,0 +1,28 @@
+from building import *
+
+group = []
+
+if not GetDepend(['RT_USING_RTC']):
+    Return('group')
+
+cwd = GetCurrentDir()
+CPPPATH = [cwd + '/../include']
+
+src = ['rtc.c']
+
+if GetDepend(['RT_USING_ALARM']):
+    src += ['alarm.c']
+
+if GetDepend(['RT_USING_SOFT_RTC']):
+    src += ['soft_rtc.c']
+
+if GetDepend(['RT_USING_DM']):
+    src += ['rtc_dm.c']
+
+if GetDepend(['RT_RTC_PL031']):
+    src += ['rtc-pl031.c']
+
+
+group = DefineGroup('DeviceDrivers', src, depend = [''], CPPPATH = CPPPATH)
+
+Return('group')
