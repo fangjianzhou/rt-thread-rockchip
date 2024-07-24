@@ -177,6 +177,10 @@ extern "C" {
 #include "drivers/clk.h"
 #endif
 
+#ifdef RT_USING_RESET
+#include "drivers/reset.h"
+#endif
+
 #ifdef RT_USING_FIRMWARE
 #ifdef RT_FIRMWARE_PSCI
 #include "drivers/psci.h"

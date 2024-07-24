@@ -32,3 +32,7 @@ config RT_SERIAL_PL011
     depends on RT_USING_DM
     depends on RT_USING_SERIAL
     default n
+    
+if RT_USING_DM && RT_USING_SERIAL
+source "$RTT_DIR/components/drivers/serial/8250/Kconfig"
+endif

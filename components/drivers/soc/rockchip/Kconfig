@@ -1,0 +1,10 @@
+menuconfig RT_SOC_ROCKCHIP
+    bool "RockChip"
+    default n
+
+if RT_SOC_ROCKCHIP
+config RT_SOC_ROCKCHIP_FIQ_DEBUGGER
+    bool "FIQ Debugger"
+    select RT_USING_OFW
+    default y
+endif

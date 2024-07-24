@@ -126,18 +126,21 @@
 #define RT_USING_RANDOM
 #define RT_USING_DEV_BUS
 #define RT_USING_CLK
+#define RT_CLK_ROCKCHIP
+#define RT_CLK_ROCKCHIP_RK3568
 #define RT_USING_HWTIMER
 #define RT_HWTIMER_ARM_ARCH
 #define RT_USING_OFW
 #define RT_FDT_EARLYCON_MSG_SIZE 128
 #define RT_USING_OFW_BUS_RANGES_NUMBER 8
 #define RT_USING_PIC
-#define MAX_HANDLERS 256
+#define MAX_HANDLERS 1024
 #define RT_PIC_ARM_GIC_V3
 #define RT_USING_PIN
 
 /* Power Management (PM) Domains device drivers */
 
+#define RT_USING_RESET
 #define RT_USING_RTC
 #define RT_USING_SERIAL
 #define RT_USING_SERIAL_V1
@@ -145,6 +148,11 @@
 
 /* Serial Device Drivers */
 
+#define RT_SERIAL_8250
+#define RT_SERIAL_8250_DW
+#define RT_USING_SOC
+#define RT_SOC_ROCKCHIP
+#define RT_SOC_ROCKCHIP_FIQ_DEBUGGER
 
 /* Using USB */
 

@@ -5,3 +5,6 @@ menuconfig RT_USING_CLK
     select RT_USING_ADT_REF
     default y
 
+if RT_USING_CLK
+source "$RTT_DIR/components/drivers/clk/rockchip/Kconfig"
+endif

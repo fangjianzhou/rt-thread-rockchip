@@ -73,6 +73,18 @@ rt_isr_handler_t rt_hw_interrupt_install(int vector, rt_isr_handler_t handler,
     return RT_NULL;
 }
 
+/**
+ * This function will install a interrupt service routine to a interrupt.
+ * @param vector the interrupt number
+ * @param new_handler the interrupt service routine to be installed
+ * @param old_handler the old interrupt service routine
+ */
+void rt_hw_interrupt_uninstall(int vector, rt_isr_handler_t handler, void *param)
+{
+    rt_pic_detach_irq(vector, param);
+}
+
+
 #ifdef RT_USING_SMP
 void rt_hw_ipi_send(int ipi_vector, unsigned int cpu_mask)
 {
