@@ -121,6 +121,8 @@
 #define RT_USING_DEVICE_IPC
 #define RT_UNAMED_PIPE_NUMBER 64
 #define RT_USING_TTY
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
 #define RT_USING_NULL
 #define RT_USING_ZERO
 #define RT_USING_RANDOM
@@ -130,12 +132,16 @@
 #define RT_CLK_ROCKCHIP_RK3568
 #define RT_USING_HWTIMER
 #define RT_HWTIMER_ARM_ARCH
+#define RT_I2C_RK3X
+#define RT_USING_MFD
+#define RT_MFD_SYSCON
 #define RT_USING_OFW
 #define RT_FDT_EARLYCON_MSG_SIZE 128
 #define RT_USING_OFW_BUS_RANGES_NUMBER 8
 #define RT_USING_PIC
 #define MAX_HANDLERS 1024
 #define RT_PIC_ARM_GIC_V3
+#define RT_USING_PINCTRL
 #define RT_USING_PIN
 
 /* Power Management (PM) Domains device drivers */

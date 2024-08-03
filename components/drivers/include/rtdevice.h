@@ -209,6 +209,11 @@ extern "C" {
 #endif
 #endif
 
+#ifdef RT_MFD_SYSCON
+#include "drivers/syscon.h"
+#endif
+
+
 #ifdef RT_USING_VIDEO
 #endif /* RT_USING_VIDEO */
 

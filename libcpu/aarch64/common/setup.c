@@ -562,6 +562,8 @@ void rt_hw_common_setup(void)
         {
             if (mem_region != page_region && mem_region->name)
             {
+                mem_region->start -= PV_OFFSET;
+                mem_region->end -= PV_OFFSET;
                 rt_page_install(*mem_region);
             }
         }
